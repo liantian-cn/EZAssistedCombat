@@ -149,8 +149,7 @@ def detect_contours_with_criteria(image):
     )
     
     detected_boxes = []
-    failed_contours = []
-    
+
     for contour in rectangles:
         x, y, w, h = cv2.boundingRect(contour)
         
@@ -158,51 +157,83 @@ def detect_contours_with_criteria(image):
 
         if MIN_WIDTH <= w <= MAX_WIDTH and MIN_HEIGHT <= h <= MAX_HEIGHT:
             detected_boxes.append((x, y, w, h))
-            # contour_area = cv2.contourArea(contour)
-            # outer_area = w * h
-            # inner_area_min = (w - BORDER_MAX_WIDTH * 2) * (h - BORDER_MAX_WIDTH * 2)
-            # inner_area_max = (w - BORDER_MIN_WIDTH * 2) * (h - BORDER_MIN_WIDTH * 2)
-            # inner_empty_area = outer_area - contour_area
-            #
-            # # 检查内部空白区域是否符合边框特征
-            # if inner_area_min * 0.8 <= inner_empty_area <= inner_area_max * 1.2:
-            #     detected_boxes.append((x, y, w, h))
-            # elif DEBUG:
-            #     # 如果在调试模式下，记录不满足内部区域条件的轮廓
-            #     print(f"内部区域不符合要求：{x}, {y}, {w}, {h}")
-            #     failed_contours.append(contour)
-        elif DEBUG:
-            print(f"尺寸不符合要求：{x}, {y}, {w}, {h}")
-            # 如果在调试模式下，记录不满足尺寸条件的轮廓
-            failed_contours.append(contour)
-    
-    # 如果在调试模式下，将输入图像与检测结果叠加保存
-    if DEBUG:
-        # 确保output目录存在
-        if not os.path.exists("output"):
-            os.makedirs("output")
-        
-        # 创建彩色图像用于绘制
-        debug_image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
-        
-        # 绘制满足条件的轮廓（红色）
-        for (x, y, w, h) in detected_boxes:
-            cv2.rectangle(debug_image, (x, y), (x+w, y+h), (0, 0, 255), 2)
-        
-        # 绘制不满足条件的轮廓（紫色）
-        for contour in failed_contours:
-            x, y, w, h = cv2.boundingRect(contour)
-            cv2.rectangle(debug_image, (x, y), (x+w, y+h), (255, 0, 255), 2)
-        
-        # 生成带时间戳的文件名（精确到秒）
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"output/contours_debug_{timestamp}.png"
-        
-        # 保存图像
-        cv2.imwrite(filename, debug_image)
-        print(f"轮廓检测调试图像已保存为 {filename}")
+
     
     return detected_boxes
+
+
+def save_debug_images(frames, merged_mask, detected_boxes):
+    """
+    保存调试图片
+    
+    Args:
+        frames: 原始帧列表
+        merged_mask: 合并后的掩码图像
+        detected_boxes: 检测到的边界框列表
+    """
+    if not DEBUG:
+        return
+    
+    # 创建output目录
+    output_dir = "output"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    # 生成时间戳
+    timestamp = str(int(datetime.now().timestamp() * 1000))
+    
+    # 创建要垂直叠加的图像列表
+    debug_images = []
+    
+    # 1. 将frames的最后一帧生成一份"原图"
+    if frames:
+        # 注意：frames中的图像是RGB格式，需要转换为BGR格式以便OpenCV正确处理
+        original_image = cv2.cvtColor(frames[-1], cv2.COLOR_RGB2BGR)
+        debug_images.append(original_image)
+    
+    # 2. merged_mask生成一份"过程1图"
+    if merged_mask is not None:
+        process1_image = cv2.cvtColor(merged_mask, cv2.COLOR_GRAY2BGR)
+        debug_images.append(process1_image)
+    
+    # 3. detected_boxes绘制在merged_mask生成过程2图
+    if merged_mask is not None:
+        process2_image = cv2.cvtColor(merged_mask, cv2.COLOR_GRAY2BGR)
+        for (x, y, w, h) in detected_boxes:
+            cv2.rectangle(process2_image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+        debug_images.append(process2_image)
+    
+    # 4. detected_boxes绘制在最后一帧生成结果图
+    if frames:
+        # 注意：frames中的图像是RGB格式，需要转换为BGR格式以便OpenCV正确处理
+        result_image = cv2.cvtColor(frames[-1], cv2.COLOR_RGB2BGR)
+        for (x, y, w, h) in detected_boxes:
+            cv2.rectangle(result_image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+        debug_images.append(result_image)
+    
+    # 垂直叠加所有图像
+    if debug_images:
+        # 确保所有图像具有相同的宽度
+        max_width = max(img.shape[1] for img in debug_images)
+        resized_images = []
+        for img in debug_images:
+            if len(img.shape) == 2:  # 灰度图转为彩色图
+                img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+            # 调整图像大小以匹配最大宽度
+            height, width = img.shape[:2]
+            if width != max_width:
+                # 保持宽高比
+                scale = max_width / width
+                new_height = int(height * scale)
+                img = cv2.resize(img, (max_width, new_height))
+            resized_images.append(img)
+        
+        # 垂直叠加图像
+        combined_image = cv2.vconcat(resized_images)
+        
+        # 保存图像
+        output_path = os.path.join(output_dir, f"debug_{timestamp}.png")
+        cv2.imwrite(output_path, combined_image)
 
 
 def process_animation_frames(frames):
@@ -226,6 +257,10 @@ def process_animation_frames(frames):
     
     # 检测符合标准的轮廓
     detected_boxes = detect_contours_with_criteria(merged_mask)
+    
+    # 保存调试图片
+    if DEBUG:
+        save_debug_images(frames, merged_mask, detected_boxes)
     
     return detected_boxes
 

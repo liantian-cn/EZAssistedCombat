@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649a2f2a-40ea-4b53-bab5-590e91e7f307" name="更改" comment="" />
+    <list default="true" id="649a2f2a-40ea-4b53-bab5-590e91e7f307" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EZAssistedCombat.py" beforeDir="false" afterPath="$PROJECT_DIR$/EZAssistedCombat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_animation_frames.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_animation_frames.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,23 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.EZAssistedCombat.executor": "Run",
-    "Python.analyze_icons.executor": "Run",
-    "Python.convert_blp_to_png.executor": "Run",
-    "Python.detect_animation_effect.executor": "Run",
-    "Python.extract_icons.executor": "Run",
-    "Python.select_region.executor": "Run",
-    "Python.select_region2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "MouseVer",
-    "settings.editor.selected.configurable": "Code Search"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.EZAssistedCombat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyze_icons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.convert_blp_to_png.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect_animation_effect.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_icons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_region.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_region2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;MouseVer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Code Search&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

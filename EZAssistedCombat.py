@@ -15,8 +15,8 @@ from process_animation_frames import process_animation_frames
 import pyautogui
 
 # 全局常量定义
-TARGET_FPS = 30
-BUFFER_SIZE = 20
+TARGET_FPS = 20
+BUFFER_SIZE = 7
 OUTPUT_RATE = 5
 
 # 全局变量
