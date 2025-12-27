@@ -15,6 +15,13 @@ PVP武器、戒指、项链、饰品（勇士级别）
 | 熊 | ☆☆☆☆ | 修改macro.lua，绑定铁鬃后，可以玩 | 月光 |
 
 
+
+| 专精 | DPS | 天赋 | code |
+|-----|-------|------|-----|
+| 兽王 | 40k | 兽群 | C0PAe5Vp030Pu2woABZaeUiTGbxsMjZmhNDbMzMLGaGbAAYmx2MzYmhZGDmZGDzMzMzMmxMWmZGzYGM0MAAAAAAAAAYmZGAzMzsggNzCYDzMA |
+| 狂暴战 | 45k | 山丘 | CgEAcaEAZVj38NIV6OfMs+6zcCAAAAAAgGDjZmZ2WmZmZmxMmZmZmZmZWGzYMmFzMzAAAxMbbjN2ssYmGzMDTmFmhFAzgZDAmZwMDDzMYmBDG |
+| 惩戒 | 58k | 烈日 | CYEAjNFr+Z1BqQl0JH6NXf3LEAAAAAAMaW2mZmlxYmBAAAAAwMlZZGmZsNMbDzsNzMGjhZsxGAmlZZmZ2amZabmZZGAwCgBAMDDgZMzshlZmZmZGGDGD|
+
 ##  键位映射
 
 
