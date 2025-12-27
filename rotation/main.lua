@@ -6,6 +6,32 @@ local EventFrame = CreateFrame("Frame", "EZAssistedCombatEventFrame", UIParent)
 
 
 local function updateFrame()
+
+    if UnitIsDeadOrGhost("player") then
+        EZ.Reset()
+        return 
+    end
+
+    if not UnitAffectingCombat("player") then
+        EZ.Reset()
+        return
+    end
+
+    if UnitInVehicle("player") then
+        EZ.Reset()
+        return
+    end
+
+    if UnitIsUnit("player", "target") then
+        EZ.Reset()
+        return
+    end
+
+    if not UnitExists("target") then
+        EZ.Reset()
+        return
+    end
+
     local spellID = C_AssistedCombat.GetNextCastSpell(false)
     -- EZ.Print("spellID:" .. spellID)
     if type(spellID) == "nil" then

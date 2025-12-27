@@ -14,19 +14,17 @@ if not EZ.TitleToColor then
 end
 
 
-function GetMacroText(spellName, classFilename, currentSpec)
+function GetMacroText(spellName)
+    local className, classFilename, classId = UnitClass("player")
+    local currentSpec = GetSpecialization()
     local macroText = "/cast " .. spellName
 
     -- 注释为例子
-    -- if classFilename == "DEMONHUNTER" and currentSpec == 1 then
-    --     if spellName == "献祭光环" then
-    --         macroText = "/cast 献祭光环\n/cast 恶魔尖刺"
-    --     elseif spellName == "灵魂裂劈" then
-    --         macroText = "/cast 灵魂裂劈\n/cast 恶魔尖刺"
-    --     elseif spellName == "烈焰咒符" then
-    --         macroText = "/use [@player] 烈焰咒符"
-    --     end
-    -- end
+    if classFilename == "DEATHKNIGHT" and currentSpec == 1 then
+        if spellName == "枯萎凋零" then
+            macroText = "/cast [@player]枯萎凋零"
+        end
+    end
     return macroText
 end
 
@@ -44,11 +42,10 @@ local function InitSpellDict()
 end
 
 local function InitMacro()
-    local className, classFilename, classId = UnitClass("player")
-    local currentSpec = GetSpecialization()
+
     for spellID, spellName in pairs(EZAssistedCombatVars.SpellDict) do
         -- EZ.Print("SpellID:" .. spellID .. " spellName:" .. spellName)
-        local macro_text = GetMacroText(spellName, classFilename, currentSpec)
+        local macro_text = GetMacroText(spellName)
         table.insert(EZ.Macros, { ["title"] = spellName, ["macrotext"] = macro_text })
     end
     local ass_name = C_Spell.GetSpellName(C_AssistedCombat.GetActionSpell())
