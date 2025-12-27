@@ -1,5 +1,162 @@
-# 2025.12.27测试
+# 测试
+
+神话9件套
+PVP武器、戒指、项链、饰品（勇士级别）
+
+##  2025.12.27测试
 
 - 复仇DH: 不会破裂
 - 防骑：不会荣耀圣灵
 - 血DK：能玩
+
+
+##  键位映射
+
+
+| key | r | g | b |
+|-----|---|----|----|
+| CTRL-F1 | 130 | 115 | 124 |
+| CTRL-F2 | 102 | 253 | 136 |
+| CTRL-F3 | 66 | 134 | 253 |
+| CTRL-F5 | 123 | 195 | 3 |
+| CTRL-F6 | 241 | 208 | 124 |
+| CTRL-F7 | 1 | 142 | 135 |
+| CTRL-F8 | 128 | 18 | 30 |
+| CTRL-F9 | 136 | 5 | 190 |
+| CTRL-F10 | 246 | 14 | 129 |
+| CTRL-F11 | 244 | 124 | 235 |
+| SHIFT-F1 | 229 | 132 | 1 |
+| SHIFT-F2 | 35 | 117 | 19 |
+| SHIFT-F3 | 30 | 27 | 153 |
+| SHIFT-F5 | 129 | 245 | 241 |
+| SHIFT-F6 | 1 | 241 | 142 |
+| SHIFT-F7 | 246 | 109 | 114 |
+| SHIFT-F8 | 147 | 91 | 243 |
+| SHIFT-F9 | 184 | 251 | 58 |
+| SHIFT-F10 | 187 | 191 | 194 |
+| SHIFT-F11 | 46 | 40 | 61 |
+| SHIFT-, | 50 | 189 | 190 |
+| SHIFT-. | 74 | 41 | 251 |
+| SHIFT-/ | 185 | 82 | 53 |
+| SHIFT-; | 69 | 213 | 65 |
+| SHIFT-' | 66 | 100 | 177 |
+| SHIFT-[ | 191 | 165 | 67 |
+| SHIFT-] | 145 | 36 | 107 |
+| SHIFT-= | 115 | 114 | 41 |
+| CTRL-, | 191 | 104 | 181 |
+| CTRL-. | 135 | 170 | 245 |
+| CTRL-/ | 211 | 0 | 194 |
+| CTRL-; | 60 | 143 | 85 |
+| CTRL-' | 147 | 201 | 113 |
+| CTRL-[ | 1 | 104 | 242 |
+| CTRL-] | 4 | 182 | 60 |
+| CTRL-= | 4 | 186 | 245 |
+| CTRL-NUMPAD1 | 250 | 200 | 41 |
+| CTRL-NUMPAD2 | 252 | 211 | 191 |
+| CTRL-NUMPAD3 | 193 | 249 | 160 |
+| CTRL-NUMPAD4 | 149 | 23 | 253 |
+| CTRL-NUMPAD5 | 13 | 95 | 90 |
+| CTRL-NUMPAD6 | 211 | 203 | 254 |
+| CTRL-NUMPAD7 | 95 | 7 | 139 |
+| CTRL-NUMPAD8 | 230 | 155 | 161 |
+| CTRL-NUMPAD9 | 62 | 252 | 192 |
+| CTRL-NUMPAD0 | 67 | 191 | 127 |
+| SHIFT-NUMPAD1 | 247 | 68 | 48 |
+| SHIFT-NUMPAD2 | 2 | 87 | 181 |
+| SHIFT-NUMPAD3 | 80 | 251 | 16 |
+| SHIFT-NUMPAD4 | 123 | 202 | 171 |
+| SHIFT-NUMPAD5 | 180 | 49 | 1 |
+| SHIFT-NUMPAD6 | 240 | 6 | 59 |
+| SHIFT-NUMPAD7 | 5 | 3 | 103 |
+| SHIFT-NUMPAD8 | 236 | 64 | 180 |
+| SHIFT-NUMPAD9 | 17 | 243 | 66 |
+| SHIFT-NUMPAD0 | 106 | 63 | 202 |
+| CTRL-SHIFT-NUMPAD1 | 155 | 59 | 161 |
+| CTRL-SHIFT-NUMPAD2 | 179 | 212 | 8 |
+| CTRL-SHIFT-NUMPAD3 | 67 | 79 | 104 |
+| CTRL-SHIFT-NUMPAD4 | 179 | 88 | 110 |
+| CTRL-SHIFT-NUMPAD5 | 135 | 167 | 54 |
+| CTRL-SHIFT-NUMPAD6 | 175 | 114 | 7 |
+| CTRL-SHIFT-NUMPAD7 | 73 | 17 | 200 |
+| CTRL-SHIFT-NUMPAD8 | 96 | 147 | 184 |
+| CTRL-SHIFT-NUMPAD9 | 244 | 147 | 71 |
+| CTRL-SHIFT-NUMPAD0 | 61 | 184 | 19 |
+| CTRL-SHIFT-F2 | 91 | 19 | 84 |
+| CTRL-SHIFT-F3 | 30 | 49 | 211 |
+| CTRL-SHIFT-F5 | 201 | 250 | 214 |
+| CTRL-SHIFT-F6 | 84 | 217 | 252 |
+| CTRL-SHIFT-F7 | 50 | 253 | 121 |
+| CTRL-SHIFT-F8 | 100 | 60 | 145 |
+| CTRL-SHIFT-F9 | 11 | 162 | 3 |
+| CTRL-SHIFT-F10 | 142 | 250 | 3 |
+| CTRL-SHIFT-F11 | 193 | 141 | 219 |
+| ALT-NUMPAD1 | 32 | 42 | 3 |
+| ALT-NUMPAD2 | 119 | 80 | 81 |
+| ALT-NUMPAD3 | 200 | 28 | 85 |
+| ALT-NUMPAD4 | 247 | 239 | 76 |
+| ALT-NUMPAD5 | 172 | 157 | 126 |
+| ALT-NUMPAD6 | 107 | 239 | 87 |
+| ALT-NUMPAD7 | 3 | 79 | 26 |
+| ALT-NUMPAD8 | 162 | 126 | 82 |
+| ALT-NUMPAD9 | 148 | 127 | 170 |
+| ALT-NUMPAD0 | 218 | 63 | 134 |
+| ALT-F1 | 182 | 163 | 3 |
+| ALT-F2 | 188 | 34 | 225 |
+| ALT-F3 | 49 | 144 | 145 |
+| ALT-F5 | 157 | 248 | 107 |
+| ALT-F6 | 85 | 90 | 248 |
+| ALT-F7 | 195 | 94 | 246 |
+| ALT-F8 | 96 | 193 | 212 |
+| ALT-F9 | 24 | 87 | 136 |
+| ALT-F10 | 200 | 11 | 142 |
+| ALT-F11 | 70 | 61 | 25 |
+| CTRL-F12 | 37 | 122 | 217 |
+| SHIFT-F4 | 141 | 82 | 1 |
+| CTRL-F4 | 14 | 159 | 192 |
+| CTRL-SHIFT-F4 | 146 | 212 | 47 |
+| CTRL-SHIFT-F1 | 19 | 245 | 209 |
+| ALT-, | 243 | 252 | 139 |
+| ALT-. | 109 | 137 | 1 |
+| ALT-/ | 243 | 51 | 97 |
+| ALT-; | 200 | 201 | 94 |
+| ALT-' | 227 | 110 | 50 |
+| ALT-[ | 169 | 2 | 42 |
+| ALT-] | 222 | 35 | 29 |
+| ALT-= | 106 | 241 | 190 |
+| ALT-SHIFT-NUMPAD1 | 38 | 79 | 249 |
+| ALT-SHIFT-NUMPAD2 | 211 | 146 | 106 |
+| ALT-SHIFT-NUMPAD3 | 111 | 174 | 109 |
+| ALT-SHIFT-NUMPAD4 | 37 | 221 | 161 |
+| ALT-SHIFT-NUMPAD5 | 19 | 205 | 14 |
+| ALT-SHIFT-NUMPAD6 | 99 | 5 | 241 |
+| ALT-SHIFT-NUMPAD7 | 232 | 43 | 224 |
+| ALT-SHIFT-NUMPAD8 | 220 | 230 | 11 |
+| ALT-SHIFT-NUMPAD9 | 9 | 45 | 85 |
+| ALT-SHIFT-NUMPAD0 | 42 | 227 | 243 |
+| ALT-SHIFT-F1 | 87 | 4 | 38 |
+| ALT-SHIFT-F2 | 237 | 108 | 179 |
+| ALT-SHIFT-F3 | 182 | 206 | 153 |
+| ALT-SHIFT-F4 | 41 | 85 | 58 |
+| ALT-SHIFT-F5 | 134 | 164 | 197 |
+| ALT-SHIFT-F6 | 32 | 30 | 254 |
+| ALT-SHIFT-F7 | 255 | 166 | 234 |
+| ALT-SHIFT-F8 | 201 | 238 | 119 |
+| ALT-SHIFT-F9 | 85 | 174 | 255 |
+| ALT-SHIFT-F10 | 81 | 207 | 164 |
+| ALT-SHIFT-F11 | 16 | 144 | 94 |
+| CTRL-SHIFT-, | 252 | 183 | 3 |
+| CTRL-SHIFT-. | 243 | 72 | 7 |
+| CTRL-SHIFT-/ | 231 | 84 | 219 |
+| CTRL-SHIFT-; | 39 | 251 | 32 |
+| CTRL-SHIFT-' | 225 | 161 | 30 |
+| CTRL-SHIFT-[ | 194 | 52 | 172 |
+| CTRL-SHIFT-] | 8 | 179 | 151 |
+| CTRL-SHIFT-= | 53 | 181 | 230 |
+| ALT-SHIFT-, | 144 | 154 | 15 |
+| ALT-SHIFT-. | 140 | 131 | 234 |
+| ALT-SHIFT-/ | 135 | 88 | 188 |
+| ALT-SHIFT-; | 187 | 169 | 248 |
+| ALT-SHIFT-' | 8 | 15 | 214 |
+| ALT-SHIFT-[ | 81 | 88 | 61 |
+| ALT-SHIFT-] | 252 | 163 | 107 |
+| ALT-SHIFT-= | 207 | 105 | 133 |
