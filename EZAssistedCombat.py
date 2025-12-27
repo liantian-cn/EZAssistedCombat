@@ -9,7 +9,7 @@ from win32gui import EnumWindows, GetWindowText
 
 
 # 设置默认日志级别为WARNING
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 TARGET_FPS = 15
 REGION = (0, 0, 18, 18)
