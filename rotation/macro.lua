@@ -25,6 +25,18 @@ function GetMacroText(spellName)
             macroText = "/cast [@player]枯萎凋零"
         end
     end
+
+    if classFilename == "DRUID" and currentSpec == 3 then
+        if spellName == "月火" then
+            macroText = "/cast 月火\n/cast 铁鬃"
+        elseif spellName == "痛击" then
+            macroText = "/cast 痛击\n/cast 铁鬃"
+        elseif spellName == "横扫" then
+            macroText = "/cast 横扫\n/cast 铁鬃"
+        elseif spellName == "裂伤" then
+            macroText = "/cast 裂伤\n/cast 铁鬃"
+        end
+    end
     return macroText
 end
 
