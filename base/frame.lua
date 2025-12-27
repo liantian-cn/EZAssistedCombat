@@ -73,6 +73,8 @@ EZ.Reset = function()
     EZ.IconIco:SetTexture(DEFAULT_ICON)
 end
 
+EZ.Reset()
+
 EZ.SetColor = function(r, g, b)
     EZ.PixelTexture:SetColorTexture(r/ 255, g / 255, b / 255, 1)
     EZ.TitleText:SetTextColor((255-r)/ 255, (255-g)/ 255, (255-b)/ 255)
@@ -84,4 +86,6 @@ EZ.FrameSetMacro = function(icon,name,color)
     EZ.TitleText:SetText(name)
 end
 
-EZ.Reset()
+
+
+

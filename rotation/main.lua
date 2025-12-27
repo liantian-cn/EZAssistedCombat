@@ -2,35 +2,40 @@ local addonName, EZ = ...
 -- 事件框架
 local EventFrame = CreateFrame("Frame", "EZAssistedCombatEventFrame", UIParent)
 
-
-
+local IDLE_ICON = "interface/icons/inv_corgi2.blp"
 
 local function updateFrame()
 
+    if not EZ.Enable then
+         return EZ.FrameSetMacro(IDLE_ICON,"未启动",{r=0,g=0,b=0})
+    end
+
     if UnitIsDeadOrGhost("player") then
-        EZ.Reset()
-        return 
+        return EZ.FrameSetMacro(IDLE_ICON,"挂了",{r=0,g=0,b=0})
     end
 
     if not UnitAffectingCombat("player") then
-        EZ.Reset()
-        return
+        return EZ.FrameSetMacro(IDLE_ICON,"未在战斗",{r=0,g=0,b=0})
     end
 
     if UnitInVehicle("player") then
-        EZ.Reset()
-        return
+        return EZ.FrameSetMacro(IDLE_ICON,"坐骑中",{r=0,g=0,b=0})
     end
 
     if UnitIsUnit("player", "target") then
-        EZ.Reset()
-        return
+        return EZ.FrameSetMacro(IDLE_ICON,"目标是玩家",{r=0,g=0,b=0})
     end
 
     if not UnitExists("target") then
-        EZ.Reset()
-        return
+        return EZ.FrameSetMacro(IDLE_ICON,"目标不存在",{r=0,g=0,b=0})
     end
+
+    local  _, _, _, _, _, _, _, _, isEmpowered, _ = UnitChannelInfo("player")
+    if isEmpowered then
+        return EZ.FrameSetMacro(IDLE_ICON,"蓄力",{r=0,g=0,b=0})
+    end
+
+
 
     local spellID = C_AssistedCombat.GetNextCastSpell(false)
     -- EZ.Print("spellID:" .. spellID)

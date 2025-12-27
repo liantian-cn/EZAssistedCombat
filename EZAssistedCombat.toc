@@ -10,6 +10,7 @@
 base\setting.lua
 base\utils.lua
 base\Keymap.lua
+base\toggle.lua
 base\frame.lua
 
 rotation\macro.lua
