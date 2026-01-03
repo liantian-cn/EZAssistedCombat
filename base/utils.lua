@@ -16,3 +16,21 @@ SetCVar("synchronizeSettings", 1)
 SetCVar("synchronizeConfig", 1)
 SetCVar("synchronizeBindings", 1)
 SetCVar("synchronizeMacros", 1)
+
+
+SetCVar("secretChallengeModeRestrictionsForced", 1)
+SetCVar("secretCombatRestrictionsForced", 1)
+SetCVar("secretEncounterRestrictionsForced", 1)
+SetCVar("secretMapRestrictionsForced", 1)
+SetCVar("secretPvPMatchRestrictionsForced", 1)
+
+
+
+
+
+
+
+
+
+
+
